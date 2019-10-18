@@ -21,7 +21,7 @@ class FlaskTestCase(unittest.TestCase):
     def test_fail(self):
         response = self.app.get('/touppercase?s=s')
         resp = json.loads(response.data.decode())
-        self.assertEqual(resp['answer'],'J','Uppercase endpoint failed known answer "S"')
+        self.assertEqual(resp,'J','Uppercase endpoint failed known answer "S"')
 
     # TODO DEFINE TWO MORE TESTS ON THE END POINTS
 
